@@ -10,6 +10,17 @@ public class Enamy : MonoBehaviour
     void TakeDamage(int value)
     {
         health -= value;
+        if (health <= 0)
+        {
+            Die();
+        }
+        Debug.Log("Health : " + health);
+    }
+
+    //죽음
+    void Die()
+    {
+        Destroy(this.gameObject);
     }
 
     //
